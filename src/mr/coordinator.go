@@ -67,7 +67,7 @@ func (c *Coordinator) server() {
 		log.Fatal("listen error:", e)
 	}
 	go http.Serve(l, nil)
-	fmt.Println("hello from mrcoordinator.")
+	// fmt.Println("hello from mrcoordinator.")
 }
 
 // main/mrcoordinator.go calls Done() periodically to find out

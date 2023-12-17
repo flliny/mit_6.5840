@@ -189,10 +189,8 @@ func call(rpcname string, args interface{}, reply interface{}) bool {
 	defer c.Close()
 
 	err = c.Call(rpcname, args, reply)
-	if err == nil {
-		return true
-	}
+	return err == nil
 
-	fmt.Println(err)
-	return false
+	// fmt.Println(err)
+	// return false
 }
